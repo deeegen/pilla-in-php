@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #0d001f
-    url("https://cdn.glitch.global/5970b456-17e9-4f56-b0f2-46f0d4636862/image%20-%202025-04-22T090554.605.png?v=1745327202593")
+    url("https://raw.githubusercontent.com/deeegen/pilla-in-php/refs/heads/main/public/assets/media/main-bg.png")
     center/cover no-repeat fixed;
   font-family: Arial, sans-serif;
   color: #f0e68c;
@@ -58,7 +58,7 @@ body::after {
   left: -40%;
   width: 180%;
   height: 180%;
-  background: url("https://cdn.glitch.global/5970b456-17e9-4f56-b0f2-46f0d4636862/image%20-%202025-04-22T121751.653.png?v=1745338690587")
+  background: url("https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/planet-bg.png?raw=true")
     center/contain no-repeat;
   opacity: 0.3;
   animation: spin 30s linear infinite;
@@ -249,7 +249,7 @@ audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
 
 .side-container {
   grid-area: side;
-  background: url("https://cdn.glitch.global/5970b456-17e9-4f56-b0f2-46f0d4636862/702b7111-59ff-4fa2-8f10-3afa3d6b9065.image%20-%202025-04-22T123040.727.png?v=1745339449226")
+  background: url("https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/sidecontainer-bg.png?raw=true")
     center/cover no-repeat;
   background-color: rgba(168, 138, 207, 0.3);
   background-blend-mode: multiply;
@@ -313,7 +313,7 @@ audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
 .main {
   grid-area: main;
   position: relative;
-  background: url("https://cdn.glitch.global/c15fc835-384e-45f6-84ec-fcea3518f542/Mw2g-ezgif.com-gif-maker.png?v=1748478209272")
+  background: url("https://raw.githubusercontent.com/deeegen/pilla-in-php/refs/heads/main/public/assets/media/container-bg.png")
     center/cover no-repeat;
   border-radius: 18px;
   overflow: hidden;
