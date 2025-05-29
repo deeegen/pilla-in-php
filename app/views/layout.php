@@ -63,12 +63,12 @@
         <div class="profile">
           <div class="profile-picture-container">
             <img
-              src="https://cdn.glitch.me/c15fc835-384e-45f6-84ec-fcea3518f542/images_(2)_V1.gif?v=1747745801434"
+              src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/main-pfp-yay-faggot-kys-ugly-fucking-faggot.gif?raw=true"
               alt="Profile Picture"
               class="profile-img"
             />
             <img
-              src="https://cdn.glitch.global/5970b456-17e9-4f56-b0f2-46f0d4636862/90285d63-04d5-4e70-bc3b-3a3a56c19ec4.image.png?v=1745414426506"
+              src="https://raw.githubusercontent.com/deeegen/pilla-in-php/refs/heads/main/public/assets/media/mini-icon.png"
               alt="Icon"
               class="profile-icon"
             />
