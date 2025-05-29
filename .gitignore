@@ -1,0 +1,42 @@
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore composer files if not used
+/vendor/
+/composer.lock
+/composer.phar
+
+# Ignore log files
+*.log
+
+# Ignore IDE/project files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore backup files
+*.bak
+*.swp
+*.tmp
+*.old
+
+# Ignore environment/config files
+.env
+
+# Ignore node-related files if not used
+/node_modules/
+package-lock.json
+yarn.lock
+
+# Ignore cache
+.cache/
+*.cache
+
+# Ignore PHPUnit test results
+phpunit.xml
+phpunit.xml.dist
+
+# Ignore coverage reports
+coverage/
