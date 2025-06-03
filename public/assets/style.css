@@ -339,6 +339,47 @@ audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
   text-shadow: 0 0 5px #ffff99, 0 0 10px #ffcc33, 0 0 20px #ffcc33;
 }
 
+.main-content-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border: 2px dashed #dda0dd;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.main-content-section p,
+li,
+h3 {
+  color: #fff9a6;
+}
+.social-links {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.social-btn {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff9a6;
+  border: 2px solid #dda0dd;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 8px #dda0dd44;
+}
+.social-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.social-btn:hover {
+  transform: scale(1.1) rotate(-8deg);
+  box-shadow: 0 0 16px #ffff66cc;
+  border-color: #ffff66;
+}
+
 .media {
   background: rgba(30, 0, 70, 0.8);
   padding: 18px;
