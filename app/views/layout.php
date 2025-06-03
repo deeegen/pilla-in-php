@@ -66,7 +66,7 @@
         <div class="profile">
           <div class="profile-picture-container">
             <img
-              src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/main-pfp-yay-faggot-kys-ugly-fucking-faggot.gif?raw=true"
+              src="public/assets/media/main-pfp-yay-faggot-kys-ugly-fucking-faggot.gif"
               alt="Profile Picture"
               class="profile-img"
             />
@@ -88,7 +88,7 @@
               title="Roblox"
             >
               <img
-                src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/logo-roblox.png?raw=true"
+                src="public/assets/media/logo-roblox.png"
                 alt="Roblox"
               />
             </a>
@@ -100,7 +100,7 @@
               title="GitHub"
             >
               <img
-                src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/image%20(5).png?raw=true"
+                src="public/assets/media/image%20(5).png"
                 alt="GitHub"
               />
             </a>
@@ -122,7 +122,7 @@
         <div class="media">
           <p><b>Here are some interests of mine:</b></p>
           <img
-            src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/1aEY.gif?raw=true"
+            src="public/assets/media/1aEY.gif"
             alt="Media Image Placeholder"
           />
           <p>Making things online (games, websites)</p>
