@@ -12,7 +12,7 @@
       I finally started to consistently take my antidepressants (Sertraline an SSRI) but I can't see any changes in my personality or emotions. I still think about suicide for 60% of my day and it pisses me off. I've been wanting to relapse too. I've been bringing pliers and a shaving razor everywhere, its gross. I just need someone I know I can talk to about my feelings.
     </p>
     <p style="color: #fff9a6; line-height: 1.8;">
-      This blog will document more than features — it'll follow the rhythm of creation, the frustrations of debugging at 3AM, and the joy of watching something grow from scratch.
+      This blog is to document my life, and emotions, and to let people view into my day-to-day life.
     </p>
     <p style="font-size: 0.9rem; color: #ffff66; margin-top: 10px;">Posted on June 3, 2025</p>
   </article>
