@@ -3,45 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <title><?= $title ?? 'Pillas Brain' ?></title>
-    <link rel="stylesheet" href="public/assets/style.css" />
+    <link rel="stylesheet" href="/public/assets/style.css" />
     <style>
-      .main-content-section {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 20px;
-        border: 2px dashed #dda0dd;
-        margin-bottom: 20px;
-        border-radius: 10px;
-      }
-      .main-content-section p, li, h3 {
-        color: #fff9a6;
-      }
-      .social-links {
-        margin-top: 16px;
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-      }
-      .social-btn {
-        display: inline-block;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        overflow: hidden;
-        background: #fff9a6;
-        border: 2px solid #dda0dd;
-        transition: transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 0 8px #dda0dd44;
-      }
-      .social-btn img {
-        width: 100%;
+      .iframe-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
         height: 100%;
-        object-fit: cover;
-        display: block;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
       }
-      .social-btn:hover {
-        transform: scale(1.1) rotate(-8deg);
-        box-shadow: 0 0 16px #ffff66cc;
-        border-color: #ffff66;
+
+      .iframe-overlay iframe {
+        width: 90%;
+        height: 80%;
+        border: none;
+      }
+
+      .iframe-overlay.active {
+        display: flex;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .open-blog-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #222;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
       }
     </style>
   </head>
@@ -56,7 +59,7 @@
     <section class="grid">
       <div class="iframe-overlay" id="iframeOverlay">
         <div class="close-btn" id="closeOverlay">×</div>
-        <iframe src="https://example.com"></iframe>
+        <iframe src="" id="blogIframe"></iframe>
       </div>
 
       <div class="side-container">
@@ -68,26 +71,25 @@
               class="profile-img"
             />
             <img
-              src="https://raw.githubusercontent.com/deeegen/pilla-in-php/refs/heads/main/public/assets/media/mini-icon.png"
+              src="https://files.catbox.moe/hzfq0a.gif"
               alt="Icon"
               class="profile-icon"
             />
           </div>
           <h2>@Pilla</h2>
-          <div class="status">Status Placeholder</div>
-          <p>"AHHHHHHHH"</p>
+          <div class="status">wan2kms</div>
           <p>Gender: F</p>
           <div class="social-links">
             <a
-              href="https://twitter.com/"
+              href="https://roblox.com/"
               target="_blank"
               class="social-btn"
-              id="twitter-btn"
-              title="Twitter"
+              id="roblox-btn"
+              title="Roblox"
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
-                alt="Twitter"
+                src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/logo-roblox.png?raw=true"
+                alt="Roblox"
               />
             </a>
             <a
@@ -98,34 +100,35 @@
               title="GitHub"
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+                src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/image%20(5).png?raw=true"
                 alt="GitHub"
               />
             </a>
             <a
-              href="https://instagram.com/"
+              href="https://open.spotify.com/user/va9fp0ua12jaw3vixj43cv84d?si=36bc087949b848bd"
               target="_blank"
               class="social-btn"
-              id="instagram-btn"
-              title="Instagram"
+              id="spotify-btn"
+              title="Spotify"
             >
               <img
                 src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-                alt="Instagram"
+                alt="Spotify"
               />
             </a>
           </div>
         </div>
 
         <div class="media">
+          <p><b>Here are some interests of mine:</b></p>
           <img
-            src="https://cdn.glitch.global/5970b456-17e9-4f56-b0f2-46f0d4636862/download%20(3).png?v=1745414711074"
+            src="https://github.com/deeegen/pilla-in-php/blob/main/public/assets/media/1aEY.gif?raw=true"
             alt="Media Image Placeholder"
           />
-          <p><b>Here are some interests of mine:</b></p>
           <p>Making things online (games, websites)</p>
           <p>Art (pencil, digital, photography, etc)</p>
           <p>Socializing :)) I'll talk and listen to (mostly) anyone</p>
+          <button class="open-blog-btn" id="openBlogBtn">Open Blog</button>
         </div>
       </div>
 
@@ -147,8 +150,23 @@
           alert('Opening ' + this.title + ' profile!');
         });
       });
+
+      const openBtn = document.getElementById('openBlogBtn');
+      const closeBtn = document.getElementById('closeOverlay');
+      const overlay = document.getElementById('iframeOverlay');
+      const iframe = document.getElementById('blogIframe');
+
+      openBtn.addEventListener('click', () => {
+        iframe.src = '/blog/embed';
+        overlay.classList.add('active');
+      });
+
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        iframe.src = '';
+      });
     </script>
 
-    <script src="public/assets/script.js"></script>
+    <script src="/public/assets/script.js"></script>
   </body>
 </html>
