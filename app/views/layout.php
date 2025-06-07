@@ -4,49 +4,6 @@
     <meta charset="UTF-8" />
     <title><?= $title ?? 'Pillas Brain' ?></title>
     <link rel="stylesheet" href="/public/assets/style.css" />
-    <style>
-      .iframe-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .iframe-overlay iframe {
-        width: 90%;
-        height: 80%;
-        border: none;
-      }
-
-      .iframe-overlay.active {
-        display: flex;
-      }
-
-      .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 40px;
-        color: #fff;
-        cursor: pointer;
-      }
-
-      .open-blog-btn {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #222;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-      }
-    </style>
   </head>
   <body>
     <header class="header">
@@ -157,9 +114,10 @@
       const iframe = document.getElementById('blogIframe');
 
       openBtn.addEventListener('click', () => {
-        iframe.src = '/blog/embed';
-        overlay.classList.add('active');
-      });
+  iframe.src = '/blog/embed?t=' + Date.now();
+  overlay.classList.add('active');
+});
+
 
       closeBtn.addEventListener('click', () => {
         overlay.classList.remove('active');
