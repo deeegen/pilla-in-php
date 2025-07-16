@@ -108,22 +108,26 @@
         });
       });
 
-      const openBtn = document.getElementById('openBlogBtn');
-      const closeBtn = document.getElementById('closeOverlay');
-      const overlay = document.getElementById('iframeOverlay');
-      const iframe = document.getElementById('blogIframe');
+      document.addEventListener('DOMContentLoaded', function () {
+    const openBlogBtn = document.getElementById('openBlogBtn');
+    const iframeOverlay = document.getElementById('iframeOverlay');
+    const blogIframe = document.getElementById('blogIframe');
+    const closeOverlay = document.getElementById('closeOverlay');
 
-      openBtn.addEventListener('click', () => {
-  iframe.src = '/blog/embed?t=' + Date.now();
-  overlay.classList.add('active');
-});
+    const BLOG_URL = '/blog';
 
+    openBlogBtn.addEventListener('click', function () {
+      blogIframe.src = BLOG_URL;
+      iframeOverlay.style.display = 'block';
+    });
 
-      closeBtn.addEventListener('click', () => {
-        overlay.classList.remove('active');
-        iframe.src = '';
-      });
+    closeOverlay.addEventListener('click', function () {
+      iframeOverlay.style.display = 'none';
+      blogIframe.src = '';
+    });
+  });
     </script>
+    
 
     <script src="/public/assets/script.js"></script>
   </body>
