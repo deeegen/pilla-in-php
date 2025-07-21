@@ -34,7 +34,7 @@
             />
           </div>
           <h2>@Pilla</h2>
-          <div class="status">wan2kms</div>
+          <div class="status">busy and stuff</div>
           <p>Gender: F</p>
           <div class="social-links">
             <a
@@ -69,7 +69,7 @@
               title="Spotify"
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/480px-Spotify_logo_without_text.svg.png"
                 alt="Spotify"
               />
             </a>
