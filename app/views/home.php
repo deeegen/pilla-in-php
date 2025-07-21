@@ -10,22 +10,14 @@ ob_start();
   <h3>Random Stuff</h3>
   <ul>
     <li>My favorite color combo is yellow and purplee</li>
-    <li>I enjoy spending company with anyoneeee</li>
-    <li>Born and living in New York State (NOT NYC sadly)</li>
-    <li>I've gone on vacations to places like the Bahamas</li>
-    <li>Never had covid</li>
-    <li>i LOVE weed, if you LOVEEE weed, hmu</li>
-    <li>The government doesnt know but i am a criminal</li>
-    <li>I'll respond to all your dms o_o</li>
+    
   </ul>
-  <h3>Here are some of my RED FLAGSSS:</h3>
+  <h3>Title:</h3>
   <ul>
-    <li>I am homosexual (pansexual or fluid i think)</li>
-    <li>I have mental illness that may effect you if you interact with me</li>
-    <li>I'm very unsocial if I don't know you too well (doesnt mean i dont wanna talkk)</li>
-  </ul>
+    <li></li>
+</ul>
 </div>
 <?php
 $content = ob_get_clean();
-$title = "Home";
+$title = "Pilla66 Blog & About";
 require __DIR__ . '/layout.php';
