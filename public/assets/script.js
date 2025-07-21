@@ -1,28 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
   const playlist = [
     {
-      title: "Psionic Stasis Mask",
-      url: "https://files.catbox.moe/7z5d9b.mp3",
+      title: "4 U",
+      url: "https://files.catbox.moe/9te1b5.mp3",
     },
     {
-      title: "voyuitwaaien",
-      url: "https://files.catbox.moe/px0h4c.mp3",
+      title: "Yellow",
+      url: "https://files.catbox.moe/7yydn8.mp3",
     },
     {
-      title: "Tell Me Why",
-      url: "https://files.catbox.moe/f0regb.mp3",
+      title: "WetDreams",
+      url: "https://files.catbox.moe/h07dl7.mp3",
     },
     {
-      title: "Return to Zero Возвращайся Beztebya",
-      url: "https://files.catbox.moe/famxsv.mp3",
+      title: "IDeserveThis",
+      url: "https://files.catbox.moe/m6oujl.mp3",
     },
     {
       title: "u dont love me or want me",
       url: "https://cdn.glitch.global/5970b456-17e9-4f56-b0f2-46f0d4636862/u%20dont%20love%20me%20or%20want%20me%20-%20Marluxiam.mp3?v=1746641976716",
     },
     {
-      title: "Ева",
-      url: "https://files.catbox.moe/l4isqv.mp3",
+      title: "TEENAGEPOPSTAR",
+      url: "https://files.catbox.moe/dzvspl.mp3",
     },
   ];
 
