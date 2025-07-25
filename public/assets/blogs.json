@@ -1,17 +1,36 @@
 [
-    {
-      "title": "YAY im high",
-      "paragraphs": [
-        "I got to hang out with the gang yesterday :D we didnt do much just smoked a joint and played roblox. ive been avoiding using my main account because ive been avoiding people due to a specific event i dont want to talk about. i dont really know how to deal with it but i think it can wait."
-      ],
-      "date": "June 4, 2025"
-    },
-    {
-      "title": "Are my meds even working?",
-      "paragraphs": [
-        "I finally started to consistently take my antidepressants (Sertraline an SSRI) but I can't see any changes in my personality or emotions. I still think about suicide for 60% of my day and it pisses me off. I've been wanting to relapse too. I've been bringing pliers and a shaving razor everywhere, its gross. I just need someone I know I can talk to about my feelings.",
-        "The one time I'm invited somewhere is the one time I try to stay off my phone. Anything good I try to do in this stupid world just backfires on me and makes me even more deppressed than before. I just want it to stop."
-      ],
-      "date": "June 3, 2025"
-    }
-  ]
+  {
+    "title": "Dear diary :3",
+    "paragraphs": [
+      {
+        "type": "text",
+        "content": "I finally got a vape :33 i do sound like my friend saying that lol. i also got a new outfit that ive been wearing alot, maybe i can add pictures to the blog :3"
+      }
+    ],
+    "date": "June 4, 2025"
+  },
+  {
+    "title": "YAY im high",
+    "paragraphs": [
+      {
+        "type": "text",
+        "content": "I got to hang out with the gang yesterday :D we didnt do much just smoked a joint and played roblox. ive been avoiding using my main account because ive been avoiding people due to a specific event i dont want to talk about. i dont really know how to deal with it but i think it can wait."
+      }
+    ],
+    "date": "June 4, 2025"
+  },
+  {
+    "title": "Are my meds even working?",
+    "paragraphs": [
+      {
+        "type": "text",
+        "content": "I finally started to consistently take my antidepressants (Sertraline an SSRI) but I can't see any changes in my personality or emotions. I still think about suicide for 60% of my day and it pisses me off. I've been wanting to relapse too. I've been bringing pliers and a shaving razor everywhere, its gross. I just need someone I know I can talk to about my feelings."
+      },
+      {
+        "type": "text",
+        "content": "The one time I'm invited somewhere is the one time I try to stay off my phone. Anything good I try to do in this stupid world just backfires on me and makes me even more deppressed than before. I just want it to stop."
+      }
+    ],
+    "date": "June 3, 2025"
+  }
+]
