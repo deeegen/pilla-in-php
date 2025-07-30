@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
       url: "https://files.catbox.moe/7yydn8.mp3",
     },
     {
-      title: "WetDreams",
-      url: "https://files.catbox.moe/h07dl7.mp3",
+      title: "spiral",
+      url: "https://files.catbox.moe/cvkqp0.mp3",
     },
     {
-      title: "IDeserveThis",
-      url: "https://files.catbox.moe/m6oujl.mp3",
+      title: "GOT UR NUMB3R",
+      url: "https://files.catbox.moe/z3pb39.mp3",
     },
     {
       title: "u dont love me or want me",
       url: "https://cdn.glitch.global/5970b456-17e9-4f56-b0f2-46f0d4636862/u%20dont%20love%20me%20or%20want%20me%20-%20Marluxiam.mp3?v=1746641976716",
     },
     {
-      title: "TEENAGEPOPSTAR",
-      url: "https://files.catbox.moe/dzvspl.mp3",
+      title: "2GOOD4U",
+      url: "https://files.catbox.moe/o98vr5.mp3",
     },
   ];
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   const analyser = audioCtx.createAnalyser();
-  analyser.fftSize = 2048;
+  analyser.fftSize = 1024; // Reduced from 2048 to lower CPU usage
 
   const bufferLength = analyser.fftSize;
   const dataArray = new Uint8Array(bufferLength);
@@ -81,31 +81,49 @@ document.addEventListener("DOMContentLoaded", function () {
   source.connect(analyser);
   analyser.connect(audioCtx.destination);
 
+  // Resize with debounce to avoid jank
   function resizeCanvas() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
   }
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resizeCanvas, 150);
+  });
   resizeCanvas();
-  window.addEventListener("resize", resizeCanvas);
+
+  ctx.strokeStyle = "rgba(255,255,102,0.8)";
+  ctx.lineWidth = 4; // Reduced for performance
+
+  const sliceWidthCache = canvas.width / bufferLength;
 
   function draw() {
     requestAnimationFrame(draw);
     analyser.getByteTimeDomainData(dataArray);
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = "rgba(255,255,102,0.8)";
-    ctx.lineWidth = 5;
     ctx.beginPath();
-    const sliceWidth = canvas.width / bufferLength;
+
+    const heightHalf = canvas.height / 2;
     let x = 0;
+    const sliceWidth = canvas.width / bufferLength;
+
     for (let i = 0; i < bufferLength; i++) {
       const v = dataArray[i] / 128.0;
-      const y = (v * canvas.height) / 2;
-      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      const y = v * heightHalf;
+      if (i === 0) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
       x += sliceWidth;
     }
-    ctx.lineTo(canvas.width, canvas.height / 2);
+
+    ctx.lineTo(canvas.width, heightHalf);
     ctx.stroke();
   }
+  draw();
 
   audio.onplay = () => {
     if (audioCtx.state === "suspended") audioCtx.resume();
