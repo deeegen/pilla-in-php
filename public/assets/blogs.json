@@ -4,7 +4,11 @@
     "paragraphs": [
       {
         "type": "text",
-        "content": "I finally got a vape :33 i do sound like my friend saying that lol. i also got a new outfit that ive been wearing alot, maybe i can add pictures to the blog :3"
+        "content": "I finally got a vape :33  i also got a new outfit that ive been wearing alot, maybe i can add pictures to the blog :3"
+      },
+      {
+        "type": "image",
+        "src": "https://vkmycp-8000.csb.app/public/assets/media/blog1.png"
       }
     ],
     "date": "June 4, 2025"
