@@ -26,6 +26,7 @@
               src="public/assets/media/main-pfp-yay-faggot-kys-ugly-fucking-faggot.gif"
               alt="Profile Picture"
               class="profile-img"
+              loading="lazy"
             />
             <img
               src="https://files.catbox.moe/hzfq0a.gif"
@@ -34,7 +35,7 @@
             />
           </div>
           <h2>@Pilla</h2>
-          <div class="status">busy and stuff</div>
+          <div class="status">wan2kms</div>
           <p>Gender: F</p>
           <div class="social-links">
             <a
@@ -47,6 +48,7 @@
               <img
                 src="public/assets/media/logo-roblox.png"
                 alt="Roblox"
+                loading="lazy"
               />
             </a>
             <a
@@ -59,6 +61,7 @@
               <img
                 src="public/assets/media/image%20(5).png"
                 alt="GitHub"
+                loading="lazy"
               />
             </a>
             <a
@@ -69,8 +72,9 @@
               title="Spotify"
             >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/480px-Spotify_logo_without_text.svg.png"
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
                 alt="Spotify"
+                loading="lazy"
               />
             </a>
           </div>
@@ -108,26 +112,22 @@
         });
       });
 
-      document.addEventListener('DOMContentLoaded', function () {
-    const openBlogBtn = document.getElementById('openBlogBtn');
-    const iframeOverlay = document.getElementById('iframeOverlay');
-    const blogIframe = document.getElementById('blogIframe');
-    const closeOverlay = document.getElementById('closeOverlay');
+      const openBtn = document.getElementById('openBlogBtn');
+      const closeBtn = document.getElementById('closeOverlay');
+      const overlay = document.getElementById('iframeOverlay');
+      const iframe = document.getElementById('blogIframe');
 
-    const BLOG_URL = '/blog';
+      openBtn.addEventListener('click', () => {
+  iframe.src = '/blog/embed?t=' + Date.now();
+  overlay.classList.add('active');
+});
 
-    openBlogBtn.addEventListener('click', function () {
-      blogIframe.src = BLOG_URL;
-      iframeOverlay.style.display = 'block';
-    });
 
-    closeOverlay.addEventListener('click', function () {
-      iframeOverlay.style.display = 'none';
-      blogIframe.src = '';
-    });
-  });
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        iframe.src = '';
+      });
     </script>
-    
 
     <script src="/public/assets/script.js"></script>
   </body>
