@@ -1,5 +1,5 @@
 # Issues
-High ram usage
+High ram usage (might actually be cuz i was using a 30GB vm)
 
 # Todolo
 Modularize large files
