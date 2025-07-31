@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #0d001f url("/public/assets/media/main-bg.png") center/cover
+  background: #0d001f url("/public/assets/media/main-bg.webp") center/cover
     no-repeat fixed;
   font-family: Arial, sans-serif;
   color: #f0e68c;
@@ -57,7 +57,7 @@ body::after {
   left: -40%;
   width: 180%;
   height: 180%;
-  background: url("/public/assets/media/planet-bg.png") center/contain no-repeat;
+  background: url("/public/assets/media/planet-bg.webp") center/contain no-repeat;
   opacity: 0.3;
   animation: spin 30s linear infinite;
 }
@@ -259,7 +259,7 @@ audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
 
 .side-container {
   grid-area: side;
-  background: url("/public/assets/media/sidecontainer-bg.png") center/cover
+  background: url("/public/assets/media/sidecontainer-bg.webp") center/cover
     no-repeat;
   background-color: rgba(168, 138, 207, 0.3);
   background-blend-mode: multiply;
@@ -323,7 +323,7 @@ audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
 .main {
   grid-area: main;
   position: relative;
-  background: url("/public/assets/media/container-bg.png") center/cover
+  background: url("/public/assets/media/container-bg.webp") center/cover
     no-repeat;
   border-radius: 18px;
   overflow: hidden;
