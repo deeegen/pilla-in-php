@@ -2,9 +2,9 @@
 High ram usage (might actually be cuz i was using a 30GB vm)
 
 # Todolo
-Modularize large files
-Organization
-Chat? maybe not but might!
+- Modularize large files (did script.js today!)
+- Organization
+- Chat? maybe not but might!
 
 # Updates
 - Fixed blog re-open functionality
