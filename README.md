@@ -1,5 +1,5 @@
-# Bugs
-None found currently
+# Issues
+High ram usage
 
 # Todolo
 Modularize large files
