@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title><?= $title ?? 'Pillas Brain' ?></title>
+    <title>Pillas Brain</title>
     <link rel="stylesheet" href="/public/assets/style.css" />
   </head>
   <body>
@@ -23,23 +23,23 @@
         <div class="profile">
           <div class="profile-picture-container">
             <img
-              src="public/assets/media/main-pfp-yay-faggot-kys-ugly-fucking-faggot.gif"
+              src="public/assets/media/piphppfp.gif"
               alt="Profile Picture"
               class="profile-img"
-              loading="lazy"
             />
             <img
               src="https://files.catbox.moe/hzfq0a.gif"
               alt="Icon"
               class="profile-icon"
+              loading="lazy"
             />
           </div>
           <h2>@Pilla</h2>
-          <div class="status">wan2kms</div>
+          <div class="status">busy and stuff</div>
           <p>Gender: F</p>
           <div class="social-links">
             <a
-              href="https://roblox.com/"
+              href="https://roblox.com/users/8517517643"
               target="_blank"
               class="social-btn"
               id="roblox-btn"
@@ -72,7 +72,7 @@
               title="Spotify"
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/480px-Spotify_logo_without_text.svg.png"
                 alt="Spotify"
                 loading="lazy"
               />
@@ -84,7 +84,7 @@
           <p><b>Here are some interests of mine:</b></p>
           <img
             src="public/assets/media/1aEY.gif"
-            alt="Media Image Placeholder"
+            loading="lazy"
           />
           <p>Making things online (games, websites)</p>
           <p>Art (pencil, digital, photography, etc)</p>
@@ -112,23 +112,27 @@
         });
       });
 
-      const openBtn = document.getElementById('openBlogBtn');
-      const closeBtn = document.getElementById('closeOverlay');
-      const overlay = document.getElementById('iframeOverlay');
-      const iframe = document.getElementById('blogIframe');
+      document.addEventListener('DOMContentLoaded', function () {
+    const openBlogBtn = document.getElementById('openBlogBtn');
+    const iframeOverlay = document.getElementById('iframeOverlay');
+    const blogIframe = document.getElementById('blogIframe');
+    const closeOverlay = document.getElementById('closeOverlay');
 
-      openBtn.addEventListener('click', () => {
-  iframe.src = '/blog/embed?t=' + Date.now();
-  overlay.classList.add('active');
-});
+    const BLOG_URL = '/blog';
 
+    openBlogBtn.addEventListener('click', function () {
+      blogIframe.src = BLOG_URL;
+      iframeOverlay.style.display = 'block';
+    });
 
-      closeBtn.addEventListener('click', () => {
-        overlay.classList.remove('active');
-        iframe.src = '';
-      });
+    closeOverlay.addEventListener('click', function () {
+      iframeOverlay.style.display = 'none';
+      blogIframe.src = '';
+    });
+  });
     </script>
+    
+    <script type="module" src="/public/assets/main.js"></script>
 
-    <script src="/public/assets/script.js"></script>
   </body>
 </html>
