@@ -10,9 +10,11 @@ ob_start();
   <h3>Random Stuff</h3>
   <ul>
     <li>My favorite color combo is yellow and purplee</li>
-    
+    <li>I enjoy alternative fashion and dressing up</li>
+    <li>Favorite musical artist: Marluxiam</li>
+    <li>I like to make character art</li>
   </ul>
-  <h3>Title:</h3>
+  <h3>DNI (Do Not Interact):</h3>
   <ul>
     <li></li>
 </ul>
