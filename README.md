@@ -11,4 +11,4 @@ High ram usage (might actually be cuz i was using a 30GB vm)
 - Compressed files (pngs, gifs etc) and added lazy loading
 - [img] tags for blog json
 - Optimized oscilloscope (fps control)
-- Secret button to open a secret page o:
+- Automated blog posting
