@@ -7,29 +7,20 @@ class Router
         'POST' => [],
     ];
 
-    /**
-     * Register a GET route
-     */
     public function get(string $path, callable|array $callback): void
     {
         $this->routes['GET'][$path] = $callback;
     }
 
-    /**
-     * Register a POST route
-     */
     public function post(string $path, callable|array $callback): void
     {
         $this->routes['POST'][$path] = $callback;
     }
 
-    /**
-     * Resolve the current request
-     */
     public function resolve(): void
     {
         $method = $_SERVER['REQUEST_METHOD'];
-        $requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/';
+        $requestPath = rtrim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/') ?: '/';
 
         $callback = $this->routes[$method][$requestPath] ?? null;
 
@@ -38,6 +29,7 @@ class Router
             return;
         }
 
+        // Match dynamic routes
         foreach ($this->routes[$method] as $route => $cb) {
             $pattern = preg_replace('#\{([\w]+)\}#', '(?P<\1>[^/]+)', $route);
             $pattern = "#^" . $pattern . "$#";
@@ -53,13 +45,18 @@ class Router
             }
         }
 
+        // If same path exists under other method, return 405
+        $otherMethod = $method === 'GET' ? 'POST' : 'GET';
+        if (isset($this->routes[$otherMethod][$requestPath])) {
+            http_response_code(405);
+            echo "405 Method Not Allowed";
+            return;
+        }
+
         http_response_code(404);
         echo "404 Not Found";
     }
 
-    /**
-     * Execute a controller method or closure
-     */
     private function executeCallback(callable|array $callback, array $params = []): void
     {
         if (is_array($callback)) {
